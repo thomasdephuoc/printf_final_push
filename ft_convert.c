@@ -6,7 +6,7 @@
 /*   By: tde-phuo <tde-phuo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 10:35:47 by tde-phuo          #+#    #+#             */
-/*   Updated: 2019/12/16 14:28:41 by tde-phuo         ###   ########.fr       */
+/*   Updated: 2019/12/16 14:42:57 by tde-phuo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ char	*ft_formatting(t_struct *p, char *string)
 
 char	*ft_pre_formatting(t_struct *p, char *string)
 {
-	if ((int)p->precision < 0 || (p->specifier == '%' && (p->flags & PRECI_OB_FLAG)))
+	if ((int)p->precision < 0 ||
+	(p->specifier == '%' && (p->flags & PRECI_OB_FLAG)))
 	{
 		p->precision = 0;
 		p->flags ^= PRECI_OB_FLAG;
